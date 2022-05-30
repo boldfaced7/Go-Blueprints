@@ -22,3 +22,12 @@ func (t *tracer) Trace(a ...interface{}) {
 	fmt.Fprint(t.out, a...)
 	fmt.Fprintln(t.out)
 }
+
+type nilTracer struct{}
+
+func (t *nilTracer) Trace(a ...interface{}) {}
+
+// Off는 Trace에 대한 호출을 무시할 Tracer를 생성
+func Off() Tracer {
+	return &nilTracer{}
+}
