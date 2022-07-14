@@ -51,7 +51,7 @@ func main() {
 			"http://localhost:8080/auth/callback/facebook"),
 		github.New("key", "secret",
 			"http://localhost:8080/auth/callback/github"),
-		google.New("key", "secret",
+		google.New("889084092841-mus24df9ij2u7nrkvuq0linh0r8vo4ra.apps.googleusercontent.com", "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",
 			"http://localhost:8080/auth/callback/google"),
 	)
 
