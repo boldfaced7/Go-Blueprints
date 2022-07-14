@@ -12,6 +12,7 @@
 
     <ul id="messages"></ul>
     <form id="chatbox">
+      {{.UserData.name}}:<br/>
       <textarea></textarea>
       <input type="submit" value="Send" />
     </form>
@@ -42,7 +43,7 @@
         if (!window["WebSocket"]) {
           alert("오류: 브라우저가 웹 소켓을 지원하지 않습니다.")
         } else {
-		  socket = new WebSocket("ws://{{.Host}}/room");
+          socket = new WebSocket("ws://localhost:8080/room");
           socket.onclose = function() {
             alert("연결이 종료되었습니다.");
           }
